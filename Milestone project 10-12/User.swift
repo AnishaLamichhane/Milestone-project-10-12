@@ -12,7 +12,7 @@ struct Friend: Codable, Identifiable {
     let name: String
 }
 
-struct User: Codable {
+struct User: Codable, Identifiable {
     let id: String
     let name: String
     let age: Int
@@ -22,5 +22,6 @@ struct User: Codable {
     let about: String
     let friends: [Friend]
 }
+
 
 

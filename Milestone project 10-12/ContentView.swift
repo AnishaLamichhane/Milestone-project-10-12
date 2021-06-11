@@ -9,26 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
    @ObservedObject var userClass = UserClass()
+  
     var body: some View {
         NavigationView{
             List(userClass.user, id: \.id) { users in
-                VStack(alignment: .leading) {
-                    Text(users.name)
-                    Text(users.email)
-                        .foregroundColor(.secondary)
+                NavigationLink(destination: DetailView(user: users)) {
+                    VStack(alignment: .leading) {
+                        Text(users.name)
+                        Text(users.email)
+                            .foregroundColor(.secondary)
+                    }
                 }
                 
-            }.onAppear(perform: {
+            }
+            .onAppear(perform: {
                 userClass.loadData()
-                })
+            })
+            .navigationBarTitle("Fetching Data using URLSession")
+            
         }
     }
     
     
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(, friend: <#Friend#>)
+//    }
+//}

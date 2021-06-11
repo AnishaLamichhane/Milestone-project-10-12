@@ -15,6 +15,8 @@
 		AF6D89152672528A00630D48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6D89132672528A00630D48 /* LaunchScreen.storyboard */; };
 		AF6D891D26725C9900630D48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D891C26725C9900630D48 /* User.swift */; };
 		AF6D891F26725EF500630D48 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D891E26725EF500630D48 /* UserClass.swift */; };
+		AF6D892326730EC600630D48 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D892226730EC600630D48 /* DetailView.swift */; };
+		AF6D8925267329BE00630D48 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D8924267329BE00630D48 /* FriendView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AF6D89162672528A00630D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF6D891C26725C9900630D48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF6D891E26725EF500630D48 /* UserClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
+		AF6D892226730EC600630D48 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		AF6D8924267329BE00630D48 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				AF6D89082672528900630D48 /* AppDelegate.swift */,
 				AF6D890A2672528900630D48 /* SceneDelegate.swift */,
 				AF6D890C2672528900630D48 /* ContentView.swift */,
+				AF6D892226730EC600630D48 /* DetailView.swift */,
+				AF6D8924267329BE00630D48 /* FriendView.swift */,
 				AF6D891C26725C9900630D48 /* User.swift */,
 				AF6D891E26725EF500630D48 /* UserClass.swift */,
 				AF6D890E2672528A00630D48 /* Assets.xcassets */,
@@ -151,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6D8925267329BE00630D48 /* FriendView.swift in Sources */,
 				AF6D891F26725EF500630D48 /* UserClass.swift in Sources */,
+				AF6D892326730EC600630D48 /* DetailView.swift in Sources */,
 				AF6D891D26725C9900630D48 /* User.swift in Sources */,
 				AF6D89092672528900630D48 /* AppDelegate.swift in Sources */,
 				AF6D890B2672528900630D48 /* SceneDelegate.swift in Sources */,
