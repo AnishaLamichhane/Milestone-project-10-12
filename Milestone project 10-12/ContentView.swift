@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-   
+   @ObservedObject var userClass = UserClass()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            List(userClass.user, id: \.id) { users in
+                VStack(alignment: .leading) {
+                    Text(users.name)
+                    Text(users.email)
+                        .foregroundColor(.secondary)
+                }
+                
+            }.onAppear(perform: {
+                userClass.loadData()
+                })
+        }
     }
     
     

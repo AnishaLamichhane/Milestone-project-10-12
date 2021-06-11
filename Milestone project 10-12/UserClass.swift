@@ -10,9 +10,9 @@ import Foundation
 class UserClass: ObservableObject {
     @Published var user = [User]()
     
-    init(users: [User]) {
-        self.user = users
-    }
+//    init(users: [User]) {
+//        self.user = users
+//    }
     
     func loadData() {
         guard let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json") else {
