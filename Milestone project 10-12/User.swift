@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Friend: Codable {
+struct Friend: Codable, Identifiable {
     let id: String
     let name: String
 }
 
-struct User {
+struct User: Codable {
     let id: String
     let name: String
     let age: Int
@@ -22,3 +22,5 @@ struct User {
     let about: String
     let friends: [Friend]
 }
+
+
