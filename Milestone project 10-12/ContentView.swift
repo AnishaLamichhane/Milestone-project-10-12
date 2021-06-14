@@ -12,11 +12,11 @@ struct ContentView: View {
   
     var body: some View {
         NavigationView{
-            List(userClass.user, id: \.id) { users in
-                NavigationLink(destination: DetailView(user: users)) {
+            List(userClass.user, id: \.id) { user in
+                NavigationLink(destination: DetailView(userClass: self.userClass, user: user)) {
                     VStack(alignment: .leading) {
-                        Text(users.name)
-                        Text(users.email)
+                        Text(user.name)
+                        Text(user.email)
                             .foregroundColor(.secondary)
                     }
                 }
@@ -33,8 +33,8 @@ struct ContentView: View {
     
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView(, friend: <#Friend#>)
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+   static var previews: some View {
+    ContentView()
+    }
+}

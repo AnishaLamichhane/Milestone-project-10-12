@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct FriendView: View {
-   
-
+    var friend: Friend
+    
     var body: some View {
-        List {
-          Text("hello")
-            }
+        List() {
+           
+            Text(friend.name)
         }
+        }
+    
+  
     
 }
 

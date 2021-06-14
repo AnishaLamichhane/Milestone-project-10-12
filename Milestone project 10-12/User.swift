@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct Friend: Codable, Identifiable {
-    let id: String
-    let name: String
-}
-
 struct User: Codable, Identifiable {
     let id: String
     let name: String
@@ -21,7 +16,13 @@ struct User: Codable, Identifiable {
     let address: String
     let about: String
     let friends: [Friend]
+    
+    
 }
 
-
+struct Friend: Codable, Identifiable {
+    let id: String
+    let name: String
+    
+}
 

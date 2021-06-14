@@ -42,17 +42,8 @@ class UserClass: ObservableObject {
         }.resume()
     }
     
-//    both are same functions
-    func find(withId: String) -> User {
-        return user.first { $0.id == withId }!
+    func find(withID: String)-> User? {
+        return user.first {$0.id == withID}!
     }
-    
-    
-    func findUser(byName name: String) -> User? {
-            if let user = user.first(where: { $0.name == name }) {
-                return user
-            }
-            return user.first
-        }
     
 }

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct DetailView: View {
     @ObservedObject var userClass = UserClass()
-//    var friend :Friend
-    
     var user: User
+//    var friend: User
     var body: some View {
+       
         List {
-            
+                
             Section(header: Text("Name:")) {
                 Text(user.name)
             }
@@ -27,24 +27,29 @@ struct DetailView: View {
             Section(header: Text("Email:")) {
                 Text(user.email)
             }
-            Section(header: Text("Company:")) {
-                Text(user.company)
-            }
-            Section(header: Text("About:")) {
-                Text(user.about)
-            }
+//            Section(header: Text("Company:")) {
+//                Text(user.company)
+//            }
+//            Section(header: Text("About:")) {
+//                Text(user.about)
+//            }
             
             Section(header: Text("Friends:")) {
                 ForEach(user.friends){ friend in
-                  
-                NavigationLink(destination: FriendView()) {
-                    Text(friend.name)
-                }
+                    
+                    if let selectedUser = self.userClass.find(withID: friend.id) {
+                        NavigationLink(destination: DetailView(userClass: self.userClass, user: selectedUser)) {
+                            VStack {
+                                Text(friend.name)
+                            }
+                        }
+                    }
                     
                 }
             }
         
         }
+        
     }
 }
 
